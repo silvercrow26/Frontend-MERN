@@ -1,10 +1,8 @@
 import axios from "axios";
-import { getEnvVariables } from "../helpers";
 
-const { VITE_API_URL } = getEnvVariables();
 
 const eventsApi = axios.create({
-    baseURL: VITE_API_URL
+    baseURL: import.meta.env.VITE_API_URL
 });
 
 //Configurar interceptores
